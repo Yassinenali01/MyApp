@@ -14,10 +14,15 @@ function App() {
   ]);
 
 
+  const addTask = (taskText : any) => {
+    setTasks([...tasks, taskText]);
+  }
+
+
   return (
     <SafeAreaView>
       <ToDoList tasks={tasks} />
-      <ToDoForm />
+      <ToDoForm addTask={addTask}/>
     </SafeAreaView>
   );
 }
